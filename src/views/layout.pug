@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css") 
+        title Document
+    body
+        if loggedIn && !inRoom
+            header.screen-header
+                div.screen-header__title
+                    h1=pageTitle
+                        a(href="more.html") 
+                div.screnn-header__icons
+                    block icons       
+        block content
+        if loggedIn && !inRoom
+            nav.nav 
+                ul.nav__list 
+                    li.nav__btn 
+                        a.nav__link(href="/users")
+                            i.fa-solid.fa-user
+                    li.nav__btn 
+                        a.nav__link(href="/chats")
+                            i.fa-sharp.fa-solid.fa-comment-dots
+                    li.nav__btn 
+                        a.nav__link(href="")
+                            i.fa-solid.fa-magnifying-glass
+                    li.nav__btn 
+                        a.nav__link(href="")
+                            i.fa-solid.fa-ellipsis
+                
+        script(src="https://kit.fontawesome.com/17921649dd.js"
+            crossorigin="anonymous")
+        block script  

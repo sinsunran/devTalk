@@ -1,0 +1,21 @@
+extends ../layout
+include ../mixins/room
+block content
+
+    if rooms  
+        each room in rooms
+            +room(room)
+        else
+            h1 you are currently not in any chatroom
+    else 
+        h1 no chats
+
+block icons
+    div 
+        i.fa-solid.fa-magnifying-glass.fa-lg
+    div 
+        i.fa-sharp.fa-solid.fa-comments
+    div 
+        i.fa-solid.fa-music.fa-lg
+    div 
+        i.fa-solid.fa-gear.fa-lg

@@ -1,0 +1,6 @@
+mixin room(room)
+    div(onclick=`/chats/${room._id}`)
+        img(src="")
+        div 
+            span #{room.paticipants}
+            span message
