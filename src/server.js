@@ -22,6 +22,7 @@ app.use(
 );
 app.use(localsMiddleware);
 app.use(logger);
+app.use("/assets", express.static("assets"));
 app.use(express.urlencoded({ extended: true }));
 app.use("/", rootRouter);
 app.use("/users", userRouter);
